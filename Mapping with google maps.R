@@ -6,8 +6,7 @@ library(mapproj)
 map <- get_map(location = 'Africa', zoom = 4, maptype = "terrain") ## get google map
 ggmap(map)
 
-sam <- read.table("sample info.csv", h=T, sep="\t") ## read the sample info table - convert the xls file first to csv file and then import it in R
-													### depending if the csv file is comma delimited or tab delimited it will need sep="," or sep="\t". 
+sam <- read.table("sample info.csv", h=T, sep="\t") it in R
 sam_count <- sam[order(sam$country),] ## oder individuals based on Country name
 count <- unique(sam_count$country) ### get unique country names
 
